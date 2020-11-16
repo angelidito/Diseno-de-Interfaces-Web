@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <title>Ejemplos con formularios.</title>
     <style>
-        body{
+        body {
             padding: 20px;
         }
+
         form,
         div {
             margin: 10px;
         }
-        h1{
-            background-color:blue;
-            color:white;
+
+        h1 {
+            background-color: blue;
+            color: white;
         }
-        h2{
-            background-color:cyan;
+
+        h2 {
+            background-color: cyan;
         }
-        h3{
-            background-color:lightblue;
+
+        h3 {
+            background-color: lightblue;
         }
-        ul{
+
+        ul {
             list-style-type: none;
         }
     </style>
@@ -42,6 +47,7 @@
             <input type="submit" value="Search...">
         </form>
     </section>
+
     <section>
         <h2>Etiquetas (<i>label</i>).</h2>
         <form>
@@ -54,12 +60,16 @@
             </div>
         </form>
     </section>
+
+
     <section>
         <h2>Agrupar controles (<i>fieldset</i>).</h2>
         <form>
             <fieldset name="clubfields" disabled>
                 <legend>
-                    <label> <input type="checkbox" name="club" onchange="form.clubfields.disabled = !checked"> Use Club Card </label>
+                    <label> <input type="checkbox" name="club" 
+                        onchange="form.clubfields.disabled = !checked"> Use Club
+                        Card </label>
                     <!-- !checked equivale a false -->
                 </legend>
                 <div><label>Name on card: <input name="clubname" required> </label></div>
@@ -70,18 +80,25 @@
             </fieldset>
         </form>
     </section>
+
+
     <section>
         <h2>Atributos comunes.</h2>
         <form>
-            <div><label>Habilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8"> </label></div>
+            <div><label>Habilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8"> </label>
+            </div>
             <!-- name: Nombre del control, el cual es enviado con los datos del formulario. -->
             <!-- size: En píxeles. Para text y password es el número entero de caracteres.-->
-            <div><label>Deshabilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8" disabled> </label></div>
+            <div><label>Deshabilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8"
+                        disabled> </label></div>
             <!-- disabled: El control no está disponible para interacción. Por ejemplo, no se puede hacer click y no se envía. -->
-            <div><label>Solo lectura: <input name="clubname" type="text" value="Texto" size="10" maxlength="8" readonly> </label></div>
+            <div><label>Solo lectura: <input name="clubname" type="text" value="Texto" size="10" maxlength="8" readonly>
+                </label></div>
             <!-- readonly: El usuario no puede modificar el valor del control -->
         </form>
     </section>
+
+
     <section>
         <h2>Tipos.</h2>
         <section>
@@ -108,6 +125,8 @@
                 </div>
             </form>
         </section>
+
+
         <section>
             <h3>Tipos HTML5.</h3>
             <section>
@@ -124,6 +143,7 @@
                     <div><input type="reset"></div>
                 </form>
             </section>
+
             <section>
                 <h4>Entradas numéricas.</h4>
                 <form>
@@ -132,6 +152,7 @@
                     <!-- Se puede utilizar el range para representar un volumen. -->
                 </form>
             </section>
+
             <section>
                 <h4>Entradas de fechas y hora.</h4>
                 <form>
@@ -144,6 +165,7 @@
                     <div><label>week: <input type="week"> </label></div>
                 </form>
             </section>
+
             <section>
                 <h4>Entradas para seleccionar un color.</h4>
                 <form action="http://localhost/color.php" method="post">
@@ -152,19 +174,23 @@
                 </form>
             </section>
         </section>
+
         <section>
             <h3>Botones.</h3>
             <form>
                 <div><input type="submit"></div>
                 <div><input type="reset"></div>
-                <div><input id="mibutton" type="button" value="Botón." onclick="document.getElementById('mibutton').value = 'Hola';"></div>
+                <div><input id="mibutton" type="button" value="Botón."
+                        onclick="document.getElementById('mibutton').value = 'Hola';"></div>
             </form>
         </section>
+
         <section>
             <h3>Otros elementos.</h3>
             <form>
                 <div>
-                    <label>textarea: <textarea rows="4" cols="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti natus est laborum. Eos eius, placeat laborum fuga, fugiat neque.</textarea></label>
+                    <label>textarea: <textarea rows="4"
+                            cols="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti natus est laborum. Eos eius, placeat laborum fuga, fugiat neque.</textarea></label>
                 </div>
                 <div><label>button: <button type="submit">Botón</button></label> </div>
                 <!-- type= submit | reset | button (El type=menu ya no se usa) -->
@@ -222,14 +248,17 @@
             </section>
         </section>
     </section>
+
+
     <section>
         <h2>Nuevos atributos.</h2>
-        <form action="http://localhost/programa.php" method="post" autocomplete="on" id="miform"> <!-- novalidate-->
+        <form action="http://localhost/programa.php" method="post" autocomplete="on" id="miform">
+            <!-- novalidate-->
             <label>Nombre:<input type="text" name="fname" placeholder="Tu nombre." required></label>
             <label>Apellido: <input type="text" name="lname" required></label>
-            <label>E-mail: <input type="email" name="miemail" autocomplete="off" multiple autofocus></label>
+            <label>E-mail: <input type="email" name="miemail" autocomplete="on" multiple autofocus></label>
             <label>C.P.:</label><input pattern="[0-9]{5}" name="cpostal" title="Inserte código postal">
-            <input type="submit" > <!-- formnovalidate-->
+            <input type="submit"> <!-- formnovalidate-->
         </form>
         <button type="reset" form="miform">Reiniciar</button>
     </section>

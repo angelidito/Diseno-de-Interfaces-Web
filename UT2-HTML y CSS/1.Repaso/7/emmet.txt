@@ -1,0 +1,1 @@
+h1{Horario}+table(caption{Your Content Here}+thead(tr(th[rowspan=2]{}+th[colspan=2]{A common header for two subheads}+th[rowspan=2]{Header 3}))+tr(th{Header $}2))+tbody((tr(th{Thing A}+td{data A$}3))+(tr(th{Thing B}+td{data B$}3))+(tr(th{Thing C}+td{data C$}3)))

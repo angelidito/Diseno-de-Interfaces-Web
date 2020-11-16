@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos con formularios.</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        form,
+        div {
+            margin: 10px;
+        }
+        h1{
+            background-color:blue;
+            color:white;
+        }
+        h2{
+            background-color:cyan;
+        }
+        h3{
+            background-color:lightblue;
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Ejemplos con formularios.</h1>
+    <section>
+        <h2>Formularios de búsqueda.</h2>
+        <form action="http://www.google.com/search" method="get">
+            <label>Google: <input type="search" name="q"></label>
+            <input type="submit" value="Search...">
+        </form>
+        <form action="http://www.bing.com/search" method="get">
+            <label>Bing: <input type="search" name="q"></label>
+            <input type="submit" value="Search...">
+        </form>
+    </section>
+    <section>
+        <h2>Etiquetas (<i>label</i>).</h2>
+        <form>
+            <div>
+                <label for="form-nombre">Nombre: </label>
+                <input type="text" name=nombre id="form-nombre">
+            </div>
+            <div>
+                <label>Nombre: <input type="text" name=nombre></label>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Agrupar controles (<i>fieldset</i>).</h2>
+        <form>
+            <fieldset name="clubfields" disabled>
+                <legend>
+                    <label> <input type="checkbox" name="club" onchange="form.clubfields.disabled = !checked"> Use Club Card </label>
+                    <!-- !checked equivale a false -->
+                </legend>
+                <div><label>Name on card: <input name="clubname" required> </label></div>
+                <div><label>Card number: <input name="clubnum" required pattern="[-0-9]+"> </label></div>
+                <!-- Permite guiones y números del 0 al 9 -->
+                <div><label>Expiry date: <input name="clubexp" type="month"> </label></div>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Atributos comunes.</h2>
+        <form>
+            <div><label>Habilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8"> </label></div>
+            <!-- name: Nombre del control, el cual es enviado con los datos del formulario. -->
+            <!-- size: En píxeles. Para text y password es el número entero de caracteres.-->
+            <div><label>Deshabilitado: <input name="clubname" type="text" value="Texto" size="10" maxlength="8" disabled> </label></div>
+            <!-- disabled: El control no está disponible para interacción. Por ejemplo, no se puede hacer click y no se envía. -->
+            <div><label>Solo lectura: <input name="clubname" type="text" value="Texto" size="10" maxlength="8" readonly> </label></div>
+            <!-- readonly: El usuario no puede modificar el valor del control -->
+        </form>
+    </section>
+    <section>
+        <h2>Tipos.</h2>
+        <section>
+            <h3>Algunos usos.</h3>
+            <form method="post" enctype="multipart/form-data">
+                <div><label>text: <input type="text"> </label></div> <!-- Es el de por defecto. -->
+                <div><label>password: <input type="password"> </label></div>
+                <div><label>file: <input type="file" multiple> </label></div>
+                <!--Requiere que el formulario envíe los datos con method="post" y enctype="multipart/form-data" -->
+                <div><label>hidden: <input type="hidden"> </label></div>
+                <!--Mantiene un dato oculto a la vista pero se pasa al servidor junto con el resto de datos.-->
+                <h3>Radiobutton.</h3>
+                <div>
+                    <p>Selecciona la edad:</p>
+                    <ul>
+                        <li><input type="radio" name="edad" value=15 checked>15</li>
+                        <li><input type="radio" name="edad" value=20>20</li>
+                        <li><input type="radio" name="edad" value=30>30</li>
+                    </ul>
+                </div>
+                <h3>Checkbox:</h3>
+                <div>
+                    <label>checkbox: <input type="checkbox" checked></label>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h3>Tipos HTML5.</h3>
+            <section>
+                <h4>Entradas de texto especiales.</h4>
+                <form>
+                    <div><label>search: <input type="search"> </label></div>
+                    <!-- search: Los saltos de línea son eliminados del valor introducido-->
+                    <div><label>email: <input type="email"> </label></div>
+                    <!-- email: Dirección de correo válida-->
+                    <div><label>tel: <input type="tel" pattern="[0-9]{9}"> </label></div>
+                    <!-- tel: Los saltos de línea son eliminados automáticamente. Utilizar pattern y maxlength. -->
+                    <div><label>url: <input type="url"> </label></div>
+                    <div><input type="submit"></div>
+                    <div><input type="reset"></div>
+                </form>
+            </section>
+            <section>
+                <h4>Entradas numéricas.</h4>
+                <form>
+                    <div><label>number: <input type="number" min="0" max="5" step="1"> </label></div>
+                    <div><label>range: <input type="range" min="0" max="5" step="1"> </label></div>
+                    <!-- Se puede utilizar el range para representar un volumen. -->
+                </form>
+            </section>
+            <section>
+                <h4>Entradas de fechas y hora.</h4>
+                <form>
+                    <div><label>date: <input type="date"> </label></div>
+                    <div><label>time: <input type="time"> </label></div>
+                    <!-- <div><label>datetime: <input type="datetime"> </label></div> -->
+                    <!-- No tienen soporte ni en Chrome, ni en Firefox, entre otros. Removida de WHATWG HTML. -->
+                    <div><label>datetime-local: <input type="datetime-local"> </label></div>
+                    <div><label>month: <input type="month"> </label></div>
+                    <div><label>week: <input type="week"> </label></div>
+                </form>
+            </section>
+            <section>
+                <h4>Entradas para seleccionar un color.</h4>
+                <form action="http://localhost/color.php" method="post">
+                    <div><label>color: <input type="color" name="colorelegido"> </label></div>
+                    <input type="submit">
+                </form>
+            </section>
+        </section>
+        <section>
+            <h3>Botones.</h3>
+            <form>
+                <div><input type="submit"></div>
+                <div><input type="reset"></div>
+                <div><input id="mibutton" type="button" value="Botón." onclick="document.getElementById('mibutton').value = 'Hola';"></div>
+            </form>
+        </section>
+        <section>
+            <h3>Otros elementos.</h3>
+            <form>
+                <div>
+                    <label>textarea: <textarea rows="4" cols="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti natus est laborum. Eos eius, placeat laborum fuga, fugiat neque.</textarea></label>
+                </div>
+                <div><label>button: <button type="submit">Botón</button></label> </div>
+                <!-- type= submit | reset | button (El type=menu ya no se usa) -->
+                <div>
+                    <label for="desplegable1">Menú desplegable (<i>select</i>):</label>
+                    <select id="desplegable1" name="select">
+                        <option value="value1">Valor 1</option>
+                        <option value="value2" selected>Valor 2</option>
+                        <option value="value3">Valor 3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="desplegable2">Menú desplegable (con grupos):</label>
+                    <select id="desplegable2">
+                        <optgroup label="Frutas">
+                            <option value="manzana">Manzana</option>
+                            <option value="pera">Pera</option>
+                        </optgroup>
+                        <optgroup label="Verduras">
+                            <option value="brocoli">Brocoli</option>
+                            <option value="zanahoria">Zanahoria</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </form>
+            <section>
+                <h4>Añadidos en HTML5:</h4>
+                <div>
+                    <label for="estudios">Lista de valores (<i>datalist</i>).</label>
+                    <input id="estudios" name="estudios" type="text" list="tipos_est">
+                    <datalist id="tipos_est">
+                        <option value="primaria">
+                        <option value="secundaria">
+                        <option value="universidad">
+                    </datalist>
+                </div>
+                <div>
+                    <label>progress:<progress value="22" max="100"></progress></label>
+                </div>
+                <div>
+                    <label>meter:<meter value="2" min="0" max="10">2 de 10</meter></label>
+                </div>
+                <div>
+                    <label>meter:<meter value="0.6">60%</meter></label>
+                </div>
+                <!--meter define una medida escalar en un rango conocido. Ej: Uso de disco, relevancia de un resultado... No debe utilizarse para indicar progreso.-->
+                output:
+                <!--Para el resultado de una operación.-->
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    0<input type="range" id="a" value="50">100
+                    +<input type="number" id="b" value="50">
+                    =<output name="x" for="a b"></output>
+                </form>
+                <!-- <keygen name="clave"> Ya no se utiliza.-->
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>Nuevos atributos.</h2>
+        <form action="http://localhost/programa.php" method="post" autocomplete="on" id="miform"> <!-- novalidate-->
+            <label>Nombre:<input type="text" name="fname" placeholder="Tu nombre." required></label>
+            <label>Apellido: <input type="text" name="lname" required></label>
+            <label>E-mail: <input type="email" name="miemail" autocomplete="off" multiple autofocus></label>
+            <label>C.P.:</label><input pattern="[0-9]{5}" name="cpostal" title="Inserte código postal">
+            <input type="submit" > <!-- formnovalidate-->
+        </form>
+        <button type="reset" form="miform">Reiniciar</button>
+    </section>
+
+</body>
+
+<!-- </html> -->

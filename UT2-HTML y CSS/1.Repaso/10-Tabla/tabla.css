@@ -1,0 +1,8 @@
+thead {
+    background-color: gray;     
+}
+
+tbody th {
+    background-color: lightblue;
+}
+

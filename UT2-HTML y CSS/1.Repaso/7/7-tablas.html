@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table>tr>td+th+th+th+th^(tr>th+td*3)*3 -->
+    <h1>Horario</h1>
+
+    <!-- table>caption{Your Content Here}+thead>(tr>(th[rowspan=2]+th[colspan=2]{A common header for two subheads}+th[rowspan=2]{Header 3}))+(tr>th{Header $}*2)+(tr>th{Thing $}+td{data $}*3)*3 -->
+
+    <table>
+        <caption>Your Content Here</caption>
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">A common header for two subheads</th>
+                <th rowspan="2">Header 3</th>
+            </tr>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <th>Thing 1</th>
+                <td>data 1</td>
+                <td>data 2</td>
+                <td>data 3</td>
+            </tr>
+            <tr>
+                <th>Thing 2</th>
+                <td>data 1</td>
+                <td>data 2</td>
+                <td>data 3</td>
+            </tr>
+            <tr>
+                <th>Thing 3</th>
+                <td>data 1</td>
+                <td>data 2</td>
+                <td>data 3</td>
+            </tr>
+        </thead>
+    </table>
+    
+</body>
+</html>

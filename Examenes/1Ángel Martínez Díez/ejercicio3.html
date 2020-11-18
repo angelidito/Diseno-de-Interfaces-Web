@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        /* Estilos del ejercicio 3 */
+        input[type="submit"] {
+            margin-top: 1em;
+        }
+
+        li {
+            margin-top: 1em;
+        }
+
+        label {
+            width: 6em;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="ejercicio3.html" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <ul>
+                <li>
+                    <label>Nombre: <input type="text" name="nombre" autocomplete="name"></label>
+                </li>
+
+                <li>
+                    <label>Teléfono: 
+                        <input type="tel" value="" name="telefono" required>
+                    </label>
+                </li>
+
+                <li>
+                    <label>Email: 
+                        <input type="email" placeholder="Ej. juan@ejemplo.com" name="email" >
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Pago</legend>
+            <ul>
+                <li>
+                    <label>Causa: <input type="values" name="causa" "></label>
+                </li>
+
+                <li>
+                    <label>Tipo: 
+                        <input type="" value="" name="tipo">
+                    </label>
+                </li>
+
+                <li>
+                    <label>Fecha: 
+                        <input type="date" name="fecha" >
+                    </label>
+                </li>
+
+                <li>
+                    <label>Cantidad (€): 
+                        <input type="range" name="cantidad"  >
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+
+
+        <input type="button" value="¡Únete al reto!">
+    </form>
+
+</body>
+
+</html>

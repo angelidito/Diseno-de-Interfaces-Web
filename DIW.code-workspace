@@ -1,14 +1,11 @@
 {
 	"folders": [
 		{
-			"name": "DIW (Interfaces)",
+			"name": "Interfaces",
 			"path": "."
 		},
-		{
-			"path": "..\\..\\..\\Desktop\\Examen Interfaces Ángel Martínez Díez"
-		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Examen Interfaces Ángel Martínez Díez"
+		"liveServer.settings.multiRootWorkspaceName": "."
 	}
 }

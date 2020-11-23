@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+        }
+        main {
+            text-align: center;
+            overflow: auto;
+            width: 85%;
+            border: 3px solid #8C4F2B;
+            margin: auto;
+            background-color: #D9AD5B;
+            display: flex;
+            padding: 5%;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        #izq {
+            box-sizing: border-box;
+            float: right;
+            margin: auto 3% auto auto;
+            width: 20%;
+            
+            min-width: 180px;
+            max-width: 25%;
+        }
+
+        #drch {
+            box-sizing: border-box;
+            float: right;
+            width: 65%;
+            margin: auto;
+            
+        }
+
+        form {
+            border: 3px solid gray;
+            text-align: left;
+            padding: 5%;
+        }
+        h3{
+            text-align: left;
+            /* margin: 1.5em 0 0.2em 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img id="izq" src="./img/icono.png" alt="Icono de la web. Es un gato.">
+        <div id="drch">
+            <h3>Inicio de sesión</h3>
+            <form action="." method="POST">
+                <ul>
+                    <li>
+                        <label for="correo">Correo electrónico: </label>
+                        <input type="email" id="correo" name="correo" placeholder="tucorreo@elsitio.es">
+                    </li>
+                    <li>
+                        <label for="contraseña">Contraseña: </label>
+                        <input type="password" id="contraseña" name="contraseña" placeholder="********">
+                    </li>
+                    <li> <label for="login"><img src="./img/login.ico" alt="Login"></label>
+                        <button class="login" id="login">Accecer</button>
+                        <a href="recuperarcontraseña.html"><small>He olvidado la contraseña</small></a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

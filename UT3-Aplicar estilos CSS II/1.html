@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="a1.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        section {
+            background-color: beige;
+            border-radius: 1em;
+            padding: 1em;
+            margin: 1em;
+        }
+
+
+        nav {
+            margin: 1em;
+            display: flex;
+            min-height: 4em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: darkslategray;
+        }
+
+        nav>a {
+            font-size: 1.5em;
+            background-color: slategray;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: darkslategray;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        nav ul li {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>Alineación izquierda</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="centro">
+        <h2>Alineación centrada</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="derecha">
+        <h2>Alineación centrada</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+
+</body>
+
+</html>

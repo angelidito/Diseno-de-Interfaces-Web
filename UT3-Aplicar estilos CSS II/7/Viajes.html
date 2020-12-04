@@ -35,11 +35,11 @@
         main {
             background-color: rgb(3, 117, 73);
             display: flex;
-            justify-content: space-around;
+            justify-content: stretch;
         }
 
         section {
-            background-color: #a0c5f1;
+            
             padding: 0.7em;
             display: flex;
             align-items: center;
@@ -47,13 +47,29 @@
             width: 25%;
         }
 
-        section:nth-child(2) {
-            background-color: rgb(96, 255, 255);
+        section:nth-child(1) {
+            background-color: #a0c5f1;
+            width: 250px;
         }
 
-        section:nth-child(3) {
-            background-color: rgb(159, 208, 224);
+        section:nth-child(2) {
+            background-color: rgb(96, 255, 255);
+            flex-grow: 1;
         }
+
+section:nth-child(3) {
+    background-color: rgb(159, 208, 224);
+    width: 250px;
+    /* float: right; */
+    
+}
+
+section:nth-child(4) {
+    background-color: rgb(241, 212, 247);
+    width: 250px;
+    /* float: right; */
+    
+}
 
         img {
             height: 200px;
@@ -90,6 +106,14 @@
             <h4>Un a isla sin mar</h4>
             <p>
                 Lorem ipsum dolor, sit ame sequi itaque eaque nobiae provident rem cupiditate!
+            </p>
+        </section>
+        <section>
+            <img src="1.jpg" alt="foto 1">
+            <h4>Polonia un país aún más polaco </h4>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipidgf lasdhfnihil, saepe repellat blanditiis magni quidem, in alias recusandae
+                praesentium sapiente harum.
             </p>
         </section>
     </main>

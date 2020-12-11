@@ -8,77 +8,117 @@
     <style>
         body {
             display: flex;
-            align-items: center;
+            justify-content: center;
+            align-content: center;
+            background-color: gray;
         }
 
         main {
-            text-align: center;
-            overflow: auto;
-            width: 85%;
             border: 3px solid #8C4F2B;
-            margin: auto;
             background-color: #D9AD5B;
             display: flex;
-            padding: 5%;
-            align-content: flex-end;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            height: auto;
+            max-width: 600px;
+            min-width: 250px;
+            width: 85%;
+            box-sizing: border-box;
+            padding: 5% 5%;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
 
         #izq {
-            box-sizing: border-box;
-            float: right;
-            margin: auto 3% auto auto;
-            width: 20%;
+            margin: auto 5% auto 0;
+            width: 35%;
+            min-width: 150px;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
 
-            min-width: 180px;
-            max-width: 25%;
+        }
+
+        #izq > img {
+            margin: auto;
+            width: 35%;
+            min-width: 150px;
+            
         }
 
         #drch {
             box-sizing: border-box;
-            float: right;
-            width: 65%;
-            margin: auto;
+            width: 60%;
             max-width: 400px;
+            min-width: 175px;
+            margin: 1em 0 1em 0;
+        }
+
+        h3 {
+            margin: auto;
+            text-align: left;
+            /* margin: 1.5em 0 0.2em 0; */
         }
 
         form {
+            box-sizing: border-box;
+            width: 100%;
             border: 3px solid gray;
             text-align: left;
             padding: 5%;
         }
 
-        h3 {
-            text-align: left;
-            /* margin: 1.5em 0 0.2em 0; */
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li,
+        input {
+            width: 90%;
+            margin-right: 0.5em;
+        }
+
+        button {
+            margin-top: 0.3em;
+            display: flex;
+            align-content: center;
         }
     </style>
 </head>
 
 <body>
     <main>
-        <img id="izq" src="./img/icono.png" alt="Icono de la web. Es un gato.">
+        <div id="izq">
+            <img src="./img/icono.png" alt="Icono de la web: un gato.">
+            <h3>El sitio</h3>
+        </div>
         <div id="drch">
             <h3>Inicio de sesión</h3>
             <form action="." method="POST">
                 <ul>
                     <li>
                         <label for="correo">Correo electrónico: </label>
-                        <input type="email" id="correo" name="correo" placeholder="tucorreo@elsitio.es">
+                    </li>
+                    <li><input type="email" id="correo" name="correo" placeholder="tucorreo@elsitio.es"
+                            autocomplete="email">
                     </li>
                     <li>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-                            for="contraseña">Contraseña: </label>
-                        <input type="password" id="contraseña" name="contraseña" placeholder="********">
+                        <label for="contraseña">Contraseña: </label>
+                    </li>
+                    <li><input type="password" id="contraseña" name="contraseña" placeholder="********"
+                            autocomplete="current-password">
                     </li>
                     <li>
-                        <label for="login"><img src="./img/login.ico" alt="Login"></label>
-                        <button class="login" id="login">Accecer</button>
-                        <a href="recuperarcontraseña.html"><small>He olvidado la contraseña</small></a>
+
+                        <button type="submit" class="login" id="login">
+                            <img src="./img/login.ico" alt="Login">
+                            &nbsp;&nbsp;Accecer
+                        </button>
+                        <a href="#" onclick="alert('Contacta con el administrador de tu centro.');"><small>He olvidado
+                                la contraseña</small></a>
                     </li>
                 </ul>
             </form>

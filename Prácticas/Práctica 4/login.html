@@ -8,8 +8,8 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
             align-content: center;
+            justify-content: center;
             background-color: gray;
         }
 
@@ -22,39 +22,39 @@
             justify-content: center;
             height: auto;
             max-width: 600px;
-            min-width: 250px;
+            min-width: 231px;
             width: 85%;
             box-sizing: border-box;
-            padding: 5% 5%;
+
         }
 
 
         #izq {
-            margin: auto 5% auto 0;
-            width: 35%;
+            margin: auto 0 auto auto;
+            width: calc(35% - 1em);
             min-width: 150px;
             display: flex;
-            align-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
 
         }
 
-        #izq > img {
+        #izq>img {
             margin: auto;
-            width: 35%;
-            min-width: 150px;
-            
+            margin-top: 1em;
+            width: 150px;
+
         }
 
         #drch {
             box-sizing: border-box;
-            width: 60%;
+            margin: 1em auto 1em auto;
+            width: calc(65% - 1em);
             max-width: 400px;
-            min-width: 175px;
-            margin: 1em 0 1em 0;
         }
 
-        h3 {
+
+        h3,
+        h4 {
             margin: auto;
             text-align: left;
             /* margin: 1.5em 0 0.2em 0; */
@@ -65,10 +65,10 @@
             width: 100%;
             border: 3px solid gray;
             text-align: left;
-            padding: 5%;
         }
 
         ul {
+            margin: 2em 1em;
             list-style: none;
             padding: 0;
             display: flex;
@@ -79,12 +79,59 @@
         input {
             width: 90%;
             margin-right: 0.5em;
-        }
-
-        button {
-            margin-top: 0.3em;
             display: flex;
             align-content: center;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+
+        button {
+            margin: 0.3em 0.5em 0.1em 0;
+            display: flex;
+            align-content: center;
+        }
+
+        /* label {
+            display: flex;
+        } */
+
+        #loginico1{
+            margin: 0 0.15em 0 0.1em;
+        }
+
+        #loginico2 {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+
+            #izq {
+                margin: auto;
+                width: 130px;
+
+            }
+
+            #drch {
+                margin-top: 0.3em;
+                width: calc(100% - 2em);
+            }
+            
+            ul{
+                margin-right: 0.5em;
+            }
+
+            #loginico1 {
+                display: none;
+            }
+
+            #loginico2 {
+                display: inline;
+                margin-right: 0.4em;
+            }
+
+
+
         }
     </style>
 </head>
@@ -96,7 +143,7 @@
             <h3>El sitio</h3>
         </div>
         <div id="drch">
-            <h3>Inicio de sesión</h3>
+            <h4>Inicio de sesión</h4>
             <form action="." method="POST">
                 <ul>
                     <li>
@@ -108,14 +155,16 @@
                     <li>
                         <label for="contraseña">Contraseña: </label>
                     </li>
-                    <li><input type="password" id="contraseña" name="contraseña" placeholder="********"
+                    <li><input type="password" id="contraseña" name="contraseña" placeholder="****************"
                             autocomplete="current-password">
                     </li>
                     <li>
-
+                        <label for="login">
+                            <img src="./img/login.ico" alt="Login" id="loginico1">
+                        </label>
                         <button type="submit" class="login" id="login">
-                            <img src="./img/login.ico" alt="Login">
-                            &nbsp;&nbsp;Accecer
+                            <img src="./img/login.ico" alt="Login" id="loginico2">
+                            Accecer
                         </button>
                         <a href="#" onclick="alert('Contacta con el administrador de tu centro.');"><small>He olvidado
                                 la contraseña</small></a>

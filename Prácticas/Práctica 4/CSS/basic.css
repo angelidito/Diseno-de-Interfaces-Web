@@ -1,0 +1,187 @@
+* {
+    font-family: Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+
+/* Cabecera de la página */
+
+header {
+    background-color: #BF7F30;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 7px 7px 0px 7px;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* BREADCRUMB */
+ul.breadcrumb {
+    background-color: #BF7F30;
+    padding-left: 7px;
+    list-style: none;
+    width: 100%;
+
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Botones navegación */
+
+/* Horizontales */
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
+  /* Verticales */
+  /* .btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  } */
+
+
+
+/* Menús */
+
+menu {
+    background-color: #D9D9D9;
+    color: #8C4F2B;
+}
+
+
+/* Cuerpo de la página */
+
+main {
+    box-sizing: border-box;
+    background-color: gray;
+    color: black;
+    padding: 2.5%;
+}
+
+
+/* Pie de página */
+
+footer {
+    background-color: #BF7F30;
+    color: #D9AD5B;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: inherit;
+}
+
+footer address {
+    flex-grow: 2;
+}
+footer small{
+    flex-basis: 1;
+
+}
+
+
+/* Enlaces en el cuerpo de la página:
+    Si no se ha visitado: azul enlace
+    Si se ha visitado: morado enlace */
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple
+}
+
+a:active {
+    color: #D9AD5B
+}
+
+a:hover {
+    color: darkblue;
+}
+
+
+/* Elementos de los formularios */
+
+form {
+    background-color: #D9D9D9;
+    color: #8c4f2b;
+    border: 3px solid gray;
+}
+
+.aceptar {
+    background-color: #D9AD5B;
+    color: black;
+    padding: 0.4em 0.6em;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+.cancelar {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 0.4em 0.6em;
+    margin: 0.5em 0.5em 0.5em 0;
+}

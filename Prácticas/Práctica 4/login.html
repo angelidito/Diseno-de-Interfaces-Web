@@ -4,142 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
-    <style>
-        body {
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            background-color: gray;
-        }
+    <title>Inicio de sesión - El Sitio</title>
 
-        main {
-            border: 3px solid #8C4F2B;
-            background-color: #D9AD5B;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: center;
-            height: auto;
-            max-width: 600px;
-            min-width: 231px;
-            width: 85%;
-            box-sizing: border-box;
+    <link rel="stylesheet" href="CSS/basic.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    
 
-        }
-
-
-        #izq {
-            margin: auto 0 auto auto;
-            width: calc(35% - 1em);
-            min-width: 150px;
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        #izq>img {
-            margin: auto;
-            margin-top: 1em;
-            width: 150px;
-
-        }
-
-        #drch {
-            box-sizing: border-box;
-            margin: 1em auto 1em auto;
-            width: calc(65% - 1em);
-            max-width: 400px;
-        }
-
-
-        h3,
-        h4 {
-            margin: auto;
-            text-align: left;
-            /* margin: 1.5em 0 0.2em 0; */
-        }
-
-        form {
-            box-sizing: border-box;
-            width: 100%;
-            border: 3px solid gray;
-            text-align: left;
-        }
-
-        ul {
-            margin: 2em 1em;
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        li,
-        input {
-            width: 90%;
-            margin-right: 0.5em;
-            display: flex;
-            align-content: center;
-            flex-wrap: wrap;
-            align-items: flex-end;
-        }
-
-
-        button {
-            margin: 0.3em 0.5em 0.1em 0;
-            display: flex;
-            align-content: center;
-        }
-
-        /* label {
-            display: flex;
-        } */
-
-        #loginico1{
-            margin: 0 0.15em 0 0.1em;
-        }
-
-        #loginico2 {
-            display: none;
-        }
-
-        @media (max-width: 600px) {
-
-            #izq {
-                margin: auto;
-                width: 130px;
-
-            }
-
-            #drch {
-                margin-top: 0.3em;
-                width: calc(100% - 2em);
-            }
-            
-            ul{
-                margin-right: 0.5em;
-            }
-
-            #loginico1 {
-                display: none;
-            }
-
-            #loginico2 {
-                display: inline;
-                margin-right: 0.4em;
-            }
-
-
-
-        }
-    </style>
 </head>
 
 <body>
     <main>
         <div id="izq">
-            <img src="./img/icono.png" alt="Icono de la web: un gato.">
+            <img src="./img/logo.png" alt="Logo de la web: un gato.">
             <h3>El sitio</h3>
         </div>
         <div id="drch">
@@ -162,12 +38,11 @@
                         <label for="login">
                             <img src="./img/login.ico" alt="Login" id="loginico1">
                         </label>
-                        <button type="submit" class="login" id="login">
+                        <button type="submit" class="aceptar" id="login">
                             <img src="./img/login.ico" alt="Login" id="loginico2">
                             Accecer
                         </button>
-                        <a href="#" onclick="alert('Contacta con el administrador de tu centro.');"><small>He olvidado
-                                la contraseña</small></a>
+                        <a href="#" onclick="alert('Contacta con el administrador de tu centro.');"><small>He olvidado la contraseña</small></a>
                     </li>
                 </ul>
             </form>

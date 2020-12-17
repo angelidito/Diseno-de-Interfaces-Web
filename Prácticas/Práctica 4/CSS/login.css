@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    border: 3px solid #8C4F2B;
+    background-color: #D9AD5B;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: 4em;
+    height: auto;
+    max-width: 600px;
+    min-width: 231px;
+    width: 85%;
+    box-sizing: border-box;
+}
+
+
+#izq {
+    margin: auto 0 auto auto;
+    width: calc(35% - 1em);
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#izq>img {
+    margin: auto;
+    margin-top: 1em;
+    width: 150px;
+}
+
+#drch {
+    box-sizing: border-box;
+    margin: 1em auto 1em auto;
+    width: calc(65% - 1em);
+    max-width: 400px;
+}
+
+
+h3,
+h4 {
+    margin: auto;
+    text-align: left;
+   
+}
+
+form {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+}
+
+ul {
+    margin: 2em 1em;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li,
+input {
+    width: 90%;
+    margin-right: 0.5em;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+
+button {
+
+    display: flex;
+    align-content: center;
+}
+
+/* label {
+            display: flex;
+        } */
+
+#loginico1 {
+    margin: 0 0.15em 0 0.1em;
+}
+
+#loginico2 {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    #izq {
+        margin: auto;
+        width: 130px;
+
+    }
+
+    #drch {
+        margin-top: 0.3em;
+        width: calc(100% - 2em);
+    }
+
+    ul {
+        margin-right: 0.5em;
+    }
+
+    #loginico1 {
+        display: none;
+    }
+
+    #loginico2 {
+        display: inline;
+        margin-right: 0.4em;
+    }
+
+}

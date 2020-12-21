@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 200px 1fr 100px;
+            grid-template-areas: "header""aside""main""footer";
+        }
+
+        header {
+            grid-area: header;
+            background-color: green;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: blue;
+        }
+
+        main {
+            grid-area: main;
+            background-color: orangered;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: yellow;
+        }
+
+
+/* Estilos escritorio */
+
+@media screen and ( min-width: 600px){
+    body {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: "header header""main aside""footer footer";
+    }
+    
+}
+
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Titulo el header</h1>
+    </header>
+    <aside>
+        <p>
+            aside: publicidad p publicidad ublicidad public publi publicidad cidad idad publici publicidad dad publ
+            publicidad icidad pu publicidad blicidad publicivdad publici publicidad dad publici publici publicidad dad
+            dad publicidad publici pub lcdaadd.
+        </p>
+    </aside>
+    <main>
+        <h2>Titulo del main </h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae maiores placeat ratione? Atque
+            voluptatem officia odit debitis commodi, error et cupiditate autem, vitae explicabo blanditiis? Cum minima
+            error soluta molestiae.
+        </p>
+    </main>
+    <footer>
+        <small>
+            Footer &copy;
+        </small>
+
+    </footer>
+</body>
+
+</html>

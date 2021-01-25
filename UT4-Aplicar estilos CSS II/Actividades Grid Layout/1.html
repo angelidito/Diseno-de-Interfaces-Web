@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Índice</title>
     <style>
-        html,body{ 
+        html,
+        body {
             height: 100%;
             margin: 0;
         }
+
         body {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-template-areas: 'header header''nav main'' footer footer';
+            grid-template-columns: 1fr;
+            grid-template-areas: 'header ''nav''main'' footer';
+            grid-template-rows: 15% 5% auto 15%;
         }
 
         header {
@@ -35,6 +38,48 @@
             background-color: royalblue;
             grid-area: footer;
         }
+
+        aside {
+            background-color: yellowgreen;
+            grid-area: aside;
+            display: none;
+        }
+
+        header,
+        nav,
+        main,
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 600px) {
+            body {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-areas: 'header header''nav main'' footer footer';
+                grid-template-rows: 20% auto 20%;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body {
+                display: grid;
+                grid-template-columns: 2fr 4fr 1fr;
+                grid-template-areas: 'header header aside''nav main aside'' footer footer aside';
+                grid-template-rows: 20% auto 20%;
+            }
+
+            aside {
+                display: flex;
+
+                align-items: center;
+            justify-content: center;
+            }
+        }
+
+        @media print 
     </style>
 </head>
 
@@ -44,6 +89,7 @@
     </header>
     <nav>MENÚ</nav>
     <main>CONTENIDO</main>
+    <aside>PUBLICIDAD</aside>
     <footer>FOOTER</footer>
 
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice</title>
+    <style>
+        html,body{ 
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: 'header header''nav main'' footer footer';
+        }
+
+        header {
+            background-color: rosybrown;
+            grid-area: header;
+        }
+
+        nav {
+            background-color: seagreen;
+            grid-area: nav;
+        }
+
+        main {
+            background-color: salmon;
+            grid-area: main;
+        }
+
+        footer {
+            background-color: royalblue;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        HEADER
+    </header>
+    <nav>MENÚ</nav>
+    <main>CONTENIDO</main>
+    <footer>FOOTER</footer>
+
+
+</body>
+
+</html>

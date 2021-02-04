@@ -64,7 +64,50 @@
             display: flex;
         }
 
+        .centro ul {
+            justify-content: center;
+        }
 
+        .derecha ul {
+            justify-content: flex-end;
+        }
+
+        .entre ul {
+            justify-content: space-between;
+        }
+
+        .alrededor ul {
+            justify-content: space-around;
+        }
+
+        .todo li {
+            flex-grow: 2;
+        }
+
+        .columnaC * {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .columnaC a {
+            padding: 0.2em;
+        }
+
+        .columnaI * {
+            flex-direction: column;
+            flex-grow: 2;
+
+
+        }
+
+        .columnaI a {
+            padding: 0.2em;
+        }
+
+        .columnaI nav {
+            flex-grow: 2;
+            align-items: flex-start;
+        }
     </style>
 </head>
 
@@ -94,7 +137,67 @@
         </nav>
     </section>
     <section class="derecha">
-        <h2>Alineación centrada</h2>
+        <h2>Alineación derecha</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="entre">
+        <h2>Espacio entre ítems</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="alrededor">
+        <h2>Espacio alrededor ítems</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="todo">
+        <h2>Ítems ocupan el 100% del contenedor</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="columnaC">
+        <h2>Ítems en columna centrados</h2>
+        <nav>
+            <a href="#">Sitio</a>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="columnaI">
+        <h2>Ítems en columna alineación izquierda</h2>
         <nav>
             <a href="#">Sitio</a>
             <ul>

@@ -20,3 +20,26 @@
 
 
 /* ANIMACIONES Y TRANSFORMACIONES */
+
+
+@keyframes girar {
+    form {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#second img {
+    animation: girar 60s infinite linear;
+}
+
+#minute img {
+    animation: girar 3600s infinite linear;
+}
+
+#hour img {
+    animation: girar 43200s infinite linear;
+}

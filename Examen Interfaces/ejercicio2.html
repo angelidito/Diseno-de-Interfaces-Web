@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE2-Ejercicio 2</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <style>
+        /* Solución ejercicio 2 */
+        nav {
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: space-evenly; */
+        }
+
+        ul {
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-evenly;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* No logro lo del clicl en todo lo amarillo */
+        /* a {
+            width: 100%;
+
+            align-self: center;
+            height: 100%;
+        } */
+
+        @media screen and (min-width: 600px) {
+
+            nav {
+                height: 80px;
+            }
+
+            /*  */
+            ul {
+                height: auto;
+                width: 100%;
+                flex-direction: row;
+
+                align-content: center;
+                align-content: center;
+                justify-content: space-evenly;
+            }
+
+            li {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: space-between; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

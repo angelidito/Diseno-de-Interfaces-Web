@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE2-Ejercicio 4</title>
+    <link rel="stylesheet" href="css/estilos4.css">
+    <style>
+        /* Solución ejercicio 4 */
+
+
+        #nube1 {
+            position: absolute;
+            animation-name: n1;
+            animation-duration: 10s;
+            animation-timing-function:
+                linear;
+
+            opacity: 1;
+        }
+
+
+
+        #nube2 {
+            float: right;
+            position: absolute;
+            animation-name: n1;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+        }
+
+        @keyframes nube1 {
+            0% {
+                right: 0%;
+            }
+
+            33% {
+                right: 40%;
+            }
+
+            66% {
+                right: 0%;
+            }
+
+            100% {
+                right: 40%;
+            }
+        }
+
+        @keyframes nube2 {
+            0% {
+                left: 0%;
+            }
+
+            33% {
+                left: 40%;
+            }
+
+            66% {
+                left: 0%;
+            }
+
+            100% {
+                left: 40%;
+            }
+        }
+
+
+        @keyframes p {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 100;
+            }
+        }
+
+        @keyframes phover {
+            0% {
+                font-size: 40px;
+            }
+
+            25% {
+                font-size: 50px;
+            }
+
+            50% {
+                font-size: 60px;
+            }
+
+            75% {
+                font-size: 70px;
+            }
+
+            100% {
+                font-size: 80px;
+            }
+        }
+
+        #catedral {
+            position: absolute;
+
+            height: 500px !important;
+            width: 400px !important;
+        }
+
+        #nube1 {
+            position: absolute;
+            animation: nube1 5s;
+            animation-timing-function: ease;
+
+        }
+
+        #nube2 {
+            position: absolute;
+            animation: nube2 5s;
+            animation-timing-function: ease;
+
+        }
+
+        p {
+            font-size: 40px;
+            opacity: 0%;
+            transition: p 10s;
+            animation-timing-function: ease;
+
+        }
+
+        p:hover {
+            opacity: 1;
+            transition: p 10s;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <img id="catedral" src="pictures/catedral.jpg" alt="Catedral de Burgos">
+        <img class="nube" id="nube1" src="pictures/nube.png" alt="nube 1">
+        <img class="nube" id="nube2" src="pictures/nube.png" alt="nube 2">
+        <p>Mín.-12ºC</p>
+    </div>
+</body>
+
+
+
+</html>

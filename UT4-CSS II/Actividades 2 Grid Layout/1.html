@@ -15,8 +15,12 @@
         body {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-areas: 'header ''nav''main'' footer';
-            grid-template-rows: 15% 5% auto 15%;
+            grid-template-areas:
+                'header '
+                'nav     '
+                'main  '
+                'footer ';
+            grid-template-rows: 10% 5% auto 15%;
         }
 
         header {
@@ -43,6 +47,8 @@
             background-color: yellowgreen;
             grid-area: aside;
             display: none;
+            align-items: center;
+            justify-content: center;
         }
 
         header,
@@ -52,6 +58,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+
         }
 
         @media screen and (min-width: 600px) {
@@ -73,13 +81,11 @@
 
             aside {
                 display: flex;
-
-                align-items: center;
-            justify-content: center;
             }
         }
 
-        @media print 
+
+        /* @media print */
     </style>
 </head>
 

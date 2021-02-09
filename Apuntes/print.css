@@ -1,0 +1,40 @@
+a::before {
+    content: " ("attr(href) ") ";
+}
+
+nav,
+menu,
+#menu,
+aside,
+#lateral,
+#comentarios {
+    display: none !important;
+}
+
+body,
+header,
+#cabecera,
+#contenido,
+main,
+#nav,
+#principal,
+footer,
+aside,
+#lateral,
+#comentarios,
+#pie {
+    float: none !important;
+    width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+body,
+* {
+    position: absolute;
+    color: black;
+    font-family: 100%/150% Georgia, 'Times New Roman', Times, serif;
+    /* display: flex;
+    flex-direction: column; */
+}

@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
     font-family: Brygada+1918;
     src: url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
     font-weight: 400;
-}
+} */
 
 * {
-    font-family: 'Brygada+1918', monospace;
+    font-family: 'Brygada+1918', serif, monospace;
 
     margin: 0;
     padding: 0;
@@ -15,10 +15,20 @@ html,
 body {
     width: 100%;
     height: 100%;
+    min-width: 200px;
 }
 
 body {
     background-color: gray;
+    box-sizing: border-box;
+}
+
+body * {
+    box-sizing: content-box;
+}
+
+main p {
+    margin-top: 0.7em;
 }
 
 
@@ -27,7 +37,7 @@ body {
 header {
     background-color: #BF7F30;
     color: black;
-    box-sizing: border-box;
+    box-sizing: content-box;
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
@@ -40,9 +50,16 @@ header {
 }
 
 /* BREADCRUMB */
+nav.breadcrumb {
+
+    background-color: #BF7F30;
+    box-sizing: border-box;
+    width: 100%;
+}
+
 ul.breadcrumb {
     background-color: #BF7F30;
-    padding-left: 7px;
+    box-sizing: content-box;
     list-style: none;
     width: 100%;
 
@@ -53,9 +70,9 @@ ul.breadcrumb li {
     font-size: 18px;
 }
 
-ul.breadcrumb li+li:before {
+ul.breadcrumb li:after {
     padding: 8px;
-    content: "/\00a0";
+    content: ">";
 }
 
 ul.breadcrumb li a {
@@ -69,16 +86,49 @@ ul.breadcrumb li a:hover {
 
 /* Botones navegación */
 
-/* Horizontales */
-
-.btn-group li {
+/* Desplegable verticales */
+div.desplegable {
+    position: relative;
+    display: flex;
+    width: 100%;
     background-color: #4CAF50;
-    border: 1px solid green;
-    color: white;
-    size: 10px 24px;
-    cursor: pointer;
-    float: left;
+}
 
+span.desplegable,
+.btn-group {
+    width: 100%;
+}
+
+.btn-group {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+div.desplegable:hover .btn-group {
+    display: block;
+}
+
+.btn-group li,
+span.desplegable {
+    background-color: #4CAF50;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 100%;
+    height: 2em;
+
+}
+
+.btn-group a {
+    margin: auto;
+    padding: auto;
 }
 
 /* Clear floats (clearfix hack) */
@@ -88,42 +138,19 @@ ul.breadcrumb li a:hover {
     display: table;
 }
 
+
 .btn-group li:not(:last-child) {
-    border-right: none;
+    border-bottom: none;
 }
 
 /* Add a background color on hover */
 .btn-group li:hover {
+    text-decoration: underline;
     background-color: #3e8e41;
 }
 
-@media (max-width: 500px) {
 
-    /* Botones navegación */
 
-    /* Verticales */
-    .btn-group li {
-        background-color: #4CAF50;
-        border: 1px solid green;
-        color: white;
-        padding: 10px 24px;
-        cursor: pointer;
-        width: 50%;
-        display: block;
-    }
-
-    .btn-group li:not(:last-child) {
-        border-bottom: none;
-    }
-
-    /* Add a background color on hover  */
-
-    /* .btn-group li:hover {
-        background-color: #3e8e41;
-    } */
-}
-
-*/
 /* Menús */
 
 menu {
@@ -135,11 +162,42 @@ menu {
 /* Cuerpo de la página */
 
 main {
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-color: gray;
     color: black;
-    padding: 2.5%;
 }
+
+#ciclos {
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+}
+
+#ciclos button {
+    box-sizing: content-box;
+    background-color: white;
+    border: 1px solid black;
+    color: #8C4F2B;
+    padding: 10px 24px;
+    /* cursor: pointer; */
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+#ciclos button:not(:last-child) {
+    border-bottom: none;
+    /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+#ciclos button:hover {
+    background-color: #3e8e41;
+}
+
+
+
+
 
 
 /* Pie de página */
@@ -148,18 +206,28 @@ footer {
     background-color: #BF7F30;
     color: #D9AD5B;
     padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    flex-grow: inherit;
 }
+
 
 footer address {
-    flex-grow: 2;
+    margin-bottom: 1em;
+
 }
 
-footer small {
-    flex-basis: 1;
+footer aside {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
 
+}
+
+footer aside * {
+    margin: auto;
+}
+
+footer .logo {
+    width: 70px;
+    height: 70px;
 }
 
 
@@ -169,6 +237,7 @@ footer small {
 
 a:link {
     color: blue;
+    text-decoration: none;
 }
 
 a:visited {
@@ -180,7 +249,7 @@ a:active {
 }
 
 a:hover {
-    color: darkblue;
+    color: white;
 }
 
 
@@ -205,3 +274,6 @@ form {
     padding: 0.4em 0.6em;
     margin: 0.5em 0.5em 0.5em 0;
 }
+
+
+@media (min-width: 500px) {}

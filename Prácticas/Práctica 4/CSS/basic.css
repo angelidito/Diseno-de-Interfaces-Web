@@ -21,15 +21,23 @@ body {
 body {
     background-color: gray;
     box-sizing: border-box;
+
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: 65px min-content 2em auto min-content min-content;
+    grid-template-areas:
+        'cabecera'
+        'scrumb'
+        'menu'
+        'main'
+        'aside'
+        'pie';
 }
 
 body * {
     box-sizing: content-box;
 }
 
-main p {
-    margin-top: 0.7em;
-}
 
 
 /* Cabecera de la página */
@@ -42,6 +50,7 @@ header {
     align-items: baseline;
     flex-wrap: wrap;
     padding: 7px 7px 0px 7px;
+    grid-area: cabecera;
 }
 
 .logo {
@@ -55,6 +64,7 @@ nav.breadcrumb {
     background-color: #BF7F30;
     box-sizing: border-box;
     width: 100%;
+    grid-area: scrumb;
 }
 
 ul.breadcrumb {
@@ -62,17 +72,15 @@ ul.breadcrumb {
     box-sizing: content-box;
     list-style: none;
     width: 100%;
-
 }
 
 ul.breadcrumb li {
     display: inline;
-    font-size: 18px;
 }
 
 ul.breadcrumb li:after {
-    padding: 8px;
-    content: ">";
+    padding: 0;
+    content: " > ";
 }
 
 ul.breadcrumb li a {
@@ -92,6 +100,7 @@ div.desplegable {
     display: flex;
     width: 100%;
     background-color: #4CAF50;
+    grid-area: menu;
 }
 
 span.desplegable,
@@ -112,10 +121,10 @@ div.desplegable:hover .btn-group {
 
 .btn-group li,
 span.desplegable {
-    background-color: #4CAF50;
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
-    color: white;
+    background-color: #D9AD5B;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: 8C4F2B;
     cursor: pointer;
     text-align: center;
     display: flex;
@@ -129,6 +138,7 @@ span.desplegable {
 .btn-group a {
     margin: auto;
     padding: auto;
+
 }
 
 /* Clear floats (clearfix hack) */
@@ -146,16 +156,7 @@ span.desplegable {
 /* Add a background color on hover */
 .btn-group li:hover {
     text-decoration: underline;
-    background-color: #3e8e41;
-}
-
-
-
-/* Menús */
-
-menu {
-    background-color: #D9D9D9;
-    color: #8C4F2B;
+    background-color: #8C4F2B;
 }
 
 
@@ -165,40 +166,56 @@ main {
     box-sizing: content-box;
     background-color: gray;
     color: black;
+    grid-area: main;
+
 }
 
-#ciclos {
-    box-sizing: border-box;
-    width: 95%;
-    margin: auto;
+
+
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+
+    background-color: gray;
+    padding: 0.5em;
 }
 
-#ciclos button {
-    box-sizing: content-box;
+aside div {
+    /* width: 100%; */
+    /* min-width: 200px; */
+    max-width: calc(250px - 2em);
+
+    width: auto;
+    height: auto;
+    margin: 0.5em;
+    /* border: 1px solid black; */
+}
+
+aside .texto {
+    width: auto;
+    max-width: calc(248px - 3em);
     background-color: white;
+    padding: 1em 0.5em;
     border: 1px solid black;
-    color: #8C4F2B;
-    padding: 10px 24px;
-    /* cursor: pointer; */
-    width: 90%;
-    margin: auto;
-    display: block;
+
+
 }
 
-#ciclos button:not(:last-child) {
-    border-bottom: none;
-    /* Prevent double borders */
+aside .texto li {
+
+    margin-left: 1.5em;
 }
 
-/* Add a background color on hover */
-#ciclos button:hover {
-    background-color: #3e8e41;
+aside div img {
+    width: 100%;
+    height: auto;
 }
-
-
-
-
-
 
 /* Pie de página */
 
@@ -206,23 +223,31 @@ footer {
     background-color: #BF7F30;
     color: #D9AD5B;
     padding: 12px;
+    grid-area: pie;
+    display: grid;
+    grid-template-columns: auto 80px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        'small small'
+        'dir   logo ';
 }
 
+footer small {
+    grid-area: small;
+}
 
 footer address {
-    margin-bottom: 1em;
+    margin-top: 1em;
+    grid-area: dir;
 
 }
 
-footer aside {
-    margin-top: 1em;
+#logo_footer {
+    margin: 1em auto 0 auto;
     display: flex;
     flex-direction: column;
+    grid-area: logo;
 
-}
-
-footer aside * {
-    margin: auto;
 }
 
 footer .logo {
@@ -276,4 +301,74 @@ form {
 }
 
 
-@media (min-width: 500px) {}
+@media (min-width: 500px) {
+
+    /* Botones navegación */
+
+    /* Desplegable verticales */
+    div.desplegable {
+        display: flex;
+    }
+
+    span.desplegable,
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn-group {
+        display: flex;
+    }
+
+    /* para que ya no se despliegue */
+    div.desplegable:hover .btn-group {
+        display: flex;
+    }
+
+    span.desplegable {
+        display: none;
+    }
+
+    .btn-group li {
+        border: 1px solid black;
+        display: flex;
+        min-width: max-content;
+        padding: 0 0.5em;
+
+    }
+
+    .btn-group li:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+
+    footer {
+
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'dir small logo ';
+    }
+
+    footer small {
+        margin: 1em 1em 0 1em;
+    }
+}
+
+
+@media (min-width: 1000px) {
+
+    body {
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: 65px min-content 2em auto min-content;
+        grid-template-areas:
+            'cabecera cabecera'
+            'scrumb scrumb'
+            'menu menu'
+            'main aside'
+            'pie pie';
+    }
+
+
+
+    ;
+
+}

@@ -13,7 +13,7 @@ aside {
 main {
     border: 3px solid #8C4F2B;
     background-color: #D9AD5B;
-    padding: 0;
+    padding: 1em;
     box-sizing: border-box;
     display: grid;
     grid-column: 1fr;

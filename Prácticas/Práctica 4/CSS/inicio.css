@@ -47,6 +47,10 @@
     /* position: absolute; */
 }
 
+.modulos:first-of-type {
+    border-radius: 10px;
+}
+
 
 .modulo {
     width: 200px;

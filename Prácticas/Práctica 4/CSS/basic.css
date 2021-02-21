@@ -39,6 +39,27 @@ body * {
 }
 
 
+/* Enlaces en el cuerpo de la página:
+    Si no se ha visitado: azul enlace
+    Si se ha visitado: morado enlace */
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple
+}
+
+a:active {
+    color: #D9AD5B
+}
+
+a:hover {
+    color: white;
+}
+
 
 /* Cabecera de la página */
 
@@ -138,6 +159,7 @@ span.desplegable {
 .btn-group a {
     margin: auto;
     padding: auto;
+    /* color: #8C4F2B; */
 
 }
 
@@ -203,6 +225,7 @@ aside .texto {
     background-color: white;
     padding: 1em 0.5em;
     border: 1px solid black;
+    border-radius: 10px;
 
 
 }
@@ -256,26 +279,6 @@ footer .logo {
 }
 
 
-/* Enlaces en el cuerpo de la página:
-    Si no se ha visitado: azul enlace
-    Si se ha visitado: morado enlace */
-
-a:link {
-    color: blue;
-    text-decoration: none;
-}
-
-a:visited {
-    color: purple
-}
-
-a:active {
-    color: #D9AD5B
-}
-
-a:hover {
-    color: white;
-}
 
 
 /* Elementos de los formularios */

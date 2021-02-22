@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - El Sitio</title>
+    <link rel="stylesheet" href="CSS/basic.css">
+
+    <!-- <link rel="stylesheet" href="CSS/inicio.css"> -->
+</head>
+
+<body>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let ciclos = document.getElementsByClassName('ciclos');
+
+            for (let i = 0; i < ciclos.length; i++) {
+                const div = ciclos[i];
+
+                div.addEventListener('click', mostrarOcultar);
+            }
+        })
+
+
+        function mostrarOcultar(e) {
+            let nivel = e.target.parentNode.getAttribute('class').split(' ')[1];
+
+            let div = document.getElementsByClassName(nivel)[1];
+
+
+            if (div.style.display != "flex") {
+                div.style.display = "flex";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+    <header>
+        <img src="img/logo.png" alt="El logo de la web. Es un Gato" class="logo">
+        <h1>&nbsp;El Sitio&nbsp;</h1>
+
+    </header>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb">
+            <li>
+                &nbsp;<a href="inicio.html">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Administración</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="desplegable">
+        <span class="desplegable">&nbsp;
+            Menu
+        </span>
+        <ul class="btn-group">
+            <li>
+                <a href="inicio.html">Inicio</a>
+            </li>
+            <li>
+                <a href="#">FP Báscica</a>
+            </li>
+            <li>
+                <a href="#">FP Media</a>
+            </li>
+            <li>
+                <a href="#">FP Superior</a>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+            <li>
+                <a href="#">Admón</a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <form>
+            <h2>Registro de usuarios</h2>
+            <ul>
+                <li>
+                    <label for="correo">Correo electrónico: </label>
+                </li>
+                <li><input type="email" id="correo" name="correo" placeholder="sucorreo@elsitio.es" required>
+                </li>
+                <li>
+                    <label for="contraseña">Contraseña: </label>
+                </li>
+                <li><input type="password" id="contraseña" name="contraseña" placeholder="****************" required>
+                </li>
+                <li>Tipo:</li>
+                <li>
+                    <label>
+                        <input type="radio" class="radioButton" name="tipoUsuario" id="alum" required>Alumno
+                    </label>
+                    <label>
+                        <input type="radio" class="radioButton" name="tipoUsuario" id="prof" required>Profesor
+                    </label>
+                </li>
+                <li>Acción:</li>
+                <li>
+                    <label>
+                        <input type="radio" class="radioButton" name="acción" id="reg" required>Registro
+                    </label>
+                    <label>
+                        <input type="radio" class="radioButton" name="acción" id="baja" required>Baja
+                    </label>
+                </li>
+
+                <li>
+                    <button type="submit" class="aceptar" id="login">
+                        <img src="./img/login.ico" alt="Login" id="loginico">
+                        Accecer
+                    </button>
+                </li>
+            </ul>
+        </form>
+        <form>
+            <h2>Registro de usuarios</h2>
+            <ul>
+                <li>
+                    <label for="correo">Correo electrónico: </label>
+                </li>
+                <li><input type="email" id="correo" name="correo" placeholder="sucorreo@elsitio.es" required>
+                </li>
+                <li>
+                    <label for="contraseña">Contraseña: </label>
+                </li>
+                <li><input type="password" id="contraseña" name="contraseña" placeholder="****************" required>
+                </li>
+                <li>Tipo:</li>
+                <li>
+                    <label>
+                        <input type="radio" class="radioButton" name="tipoUsuario" id="alum" required>Alumno
+                    </label>
+                    <label>
+                        <input type="radio" class="radioButton" name="tipoUsuario" id="prof" required>Profesor
+                    </label>
+                </li>
+                <li>Acción:</li>
+                <li>
+                    <label>
+                        <input type="radio" class="radioButton" name="acción" id="reg" required>Registro
+                    </label>
+                    <label>
+                        <input type="radio" class="radioButton" name="acción" id="baja" required>Baja
+                    </label>
+                </li>
+
+                <li>
+                    <button type="submit" class="aceptar" id="login">
+                        <img src="./img/login.ico" alt="Login" id="loginico">
+                        Accecer
+                    </button>
+                </li>
+            </ul>
+        </form>
+
+    </main>
+    <!-- <aside>
+        <div class="texto">
+            <h5>Admnistrar es una tarea honorable. No Te olvides nunca.</h5>
+
+        </div>
+        <div class="imagen">
+            <img src="img/calendario.png" alt="calendario">
+        </div>
+        <div class="texto">
+
+        </div>
+
+
+    </aside> -->
+    <footer>
+
+        <small>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quis architecto fugiat eveniet neque
+            blanditiis non aliquam. Reprehenderit ex nulla explicabo, dignissimos, illum aut necessitatibus provident
+            iste ducimus, amet id?
+        </small>
+
+        <address>
+            <p>Calle del Sitio 42, s/n </p>
+            <p>Ciudad, País</p>
+            <p>+34 987 654 321</p>
+        </address>
+        <div id="logo_footer">
+            <img src="img/logo.png" alt="El logo de la web. Es un gato." class="logo">
+            <small> El Sitio &copy;</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

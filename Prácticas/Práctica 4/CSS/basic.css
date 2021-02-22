@@ -83,7 +83,7 @@ header {
 nav.breadcrumb {
 
     background-color: #BF7F30;
-    box-sizing: border-box;
+    box-sizing: content-box;
     width: 100%;
     grid-area: scrumb;
 }
@@ -99,17 +99,17 @@ ul.breadcrumb li {
     display: inline;
 }
 
-ul.breadcrumb li:after {
-    padding: 0;
+ul.breadcrumb li+li::before {
     content: " > ";
 }
 
 ul.breadcrumb li a {
     text-decoration: none;
+    color: black;
 }
 
 ul.breadcrumb li a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
 
@@ -145,7 +145,7 @@ span.desplegable {
     background-color: #D9AD5B;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    color: 8C4F2B;
+    color: #8C4F2B;
     cursor: pointer;
     text-align: center;
     display: flex;
@@ -159,7 +159,16 @@ span.desplegable {
 .btn-group a {
     margin: auto;
     padding: auto;
-    /* color: #8C4F2B; */
+    color: black;
+
+}
+
+.btn-group li:hover a {
+    color: white;
+}
+
+.btn-group a:hover {
+    color: white;
 
 }
 
@@ -286,8 +295,31 @@ footer .logo {
 form {
     background-color: #D9D9D9;
     color: #8c4f2b;
-    border: 3px solid gray;
+    border: 1px solid #8c4f2b;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
 }
+
+form h2 {
+    margin-bottom: 0.2em;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+}
+
+form input {
+    margin-bottom: 0.6em;
+}
+
+.radioButton {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+
 
 .aceptar {
     background-color: #D9AD5B;

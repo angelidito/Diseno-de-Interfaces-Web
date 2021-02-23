@@ -1,12 +1,7 @@
-/* @font-face {
-    font-family: Brygada+1918;
-    src: url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
-    font-weight: 400;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
 
 * {
-    font-family: 'Brygada+1918', serif, monospace;
-
+    font-family: 'Brygada 1918', 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -58,6 +53,8 @@ a:active {
 
 a:hover {
     color: white;
+    text-decoration: underline;
+
 }
 
 
@@ -104,7 +101,6 @@ ul.breadcrumb li+li::before {
 }
 
 ul.breadcrumb li a {
-    text-decoration: none;
     color: black;
 }
 
@@ -317,6 +313,16 @@ form input {
 .radioButton {
     margin-left: 0.3em;
     margin-right: 0.3em;
+}
+
+.loginico {
+    margin-right: 0.4em;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
